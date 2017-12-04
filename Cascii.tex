@@ -1,0 +1,92 @@
+\section{Codifica ASCII}
+\label{Cha:CodificaASCII}
+	\settowidth{\gnat}{NUL}
+	\settowidth{\gnam}{b1}
+\begin{center}
+	
+%	\begin{tabular}{r@{\hspace{0mm}}l}
+%		& 
+%		
+%		\begin{tabular}{|N{\gnam}|*8{N{\gnat}}|}
+%			\hline
+%			$b_7$	& 0 & 0 & 0 & 0 & 1 & 1 & 1 & 1 \tabularnewline
+%			
+%			$b_6$	& 0 & 0 & 1 & 1 & 0 & 0 & 1 & 1 \tabularnewline
+%			$b_5$	& 0 & 1 & 0 & 1 & 0 & 1 & 0 & 1 \tabularnewline
+%			\hline
+%		\end{tabular} 
+%		\tabularnewline	
+%		\begin{tabular}{|N{\gnam}|*4{N{\gnam}}}
+%			\hline
+%			$h_0$& $b_3$ &  $b_2$& $b_1$ & $b_0$ \tabularnewline 
+%			\hline
+%			0	& 0 & 0 & 0 & 0 \tabularnewline
+%			1	& 0 & 0 & 0 & 1 \tabularnewline
+%			2	& 0 & 0 & 1 & 0 \tabularnewline
+%			3	& 0 & 0 & 1 & 1 \tabularnewline
+%			4	& 0 & 1 & 0 & 0 \tabularnewline
+%			5	& 0 & 1 & 0 & 1 \tabularnewline
+%			6	& 0 & 1 & 1 & 0 \tabularnewline
+%			7	& 0 & 1 & 1 & 1 \tabularnewline
+%			8	& 1 & 0 & 0 & 0 \tabularnewline
+%			9	& 1 & 0 & 0 & 1 \tabularnewline
+%			A	& 1 & 0 & 1 & 0 \tabularnewline
+%			B	& 1 & 0 & 1 & 1 \tabularnewline
+%			C	& 1 & 1 & 0 & 0 \tabularnewline
+%			D	& 1 & 1 & 0 & 1 \tabularnewline
+%			E	& 1 & 1 & 1 & 0 \tabularnewline
+%			F	& 1 & 1 & 1 & 1 \tabularnewline
+%			\hline
+%		\end{tabular} 
+%		&
+%		\begin{tabular}{|N{\gnam}|*8{N{\gnat}}|}
+%			& 0 & 1 & 2 &  3& 4 & 5 & 6 & 7 \tabularnewline
+%			\hline
+%			0	& NUL & DLE & SP & 0 & @ & P & ` & p \tabularnewline
+%			1	& SOH & DC1 & !  & 1 & A & Q & a & q \tabularnewline
+%			2	& STX & DC2 & "  & 2 & B & R & b & r \tabularnewline
+%			3	& ETX & DC3 & \# & 3 & C & S & c & s \tabularnewline
+%			4	& EOT & DC4 & \$ & 4 & D & T & d & t \tabularnewline
+%			5	& ENO & NAK & \% & 5 & E & U & e & u \tabularnewline
+%			6	& ACK & SYN & \& & 6 & F & V & f & v \tabularnewline
+%			7	& BEL & ETB & '  & 7 & G & W & g & w \tabularnewline
+%			8	& BS  & CAN &  ( & 8 & H & X & h & x \tabularnewline
+%			9	& HT  & EM  &  ) & 9 & I & Y & i & y \tabularnewline
+%			10	& LF  & SUB & *  & : & J & Z & j & z \tabularnewline
+%			11	& VT  & ESC & +  & ; & K & [  & k & \{ \tabularnewline
+%			12	& FF  & FS  & ,  & < & L & \textbackslash & l & | \tabularnewline
+%			13	& CR  & GS  & -  & = & M & ] & m & \} \tabularnewline
+%			14	& SO  & RS  & .  & > & N & \^{}& n & \~{} \tabularnewline
+%			15	& SI  & US  &  / & ? & O & \_ & o & DEL \tabularnewline
+%			\hline
+%		\end{tabular} 
+%		\tabularnewline
+%	\end{tabular}
+\begin{tabular}{|M{\gnam}|*4{M{\gnam}}|M{\gnam}|*8{M{\gnat}}|}
+	\cline{6-14}
+	\multicolumn5{c|}{\pilH}	&$b_7$	& 0 & 0 & 0 & 0 & 1 & 1 & 1 & 1 \tabularnewline
+	\multicolumn5{c|}{}		&$b_6$	& 0 & 0 & 1 & 1 & 0 & 0 & 1 & 1 \tabularnewline
+	\multicolumn5{c|}{\pilD}	&$b_5$	& 0 & 1 & 0 & 1 & 0 & 1 & 0 & 1 \tabularnewline
+	\hline
+	$h_0$& $b_3$ &  $b_2$& $b_1$ & $b_0$ && 0 & 1 & 2 &  3& 4 & 5 & 6 & 7\pilH\pilD\tabularnewline
+	\hline
+	0	& 0 & 0 & 0 & 0 & 0	& NUL & DLE & SP & 0 & @ & P & ` & p\pilH\tabularnewline
+	1	& 0 & 0 & 0 & 1 & 1	& SOH & DC1 & !  & 1 & A & Q & a & q \tabularnewline
+	2	& 0 & 0 & 1 & 0 & 2	& STX & DC2 & \string"  & 2 & B & R & b & r \tabularnewline
+	3	& 0 & 0 & 1 & 1 & 3	& ETX & DC3 & \# & 3 & C & S & c & s \tabularnewline
+	4	& 0 & 1 & 0 & 0 & 4	& EOT & DC4 & \$ & 4 & D & T & d & t \tabularnewline
+	5	& 0 & 1 & 0 & 1 & 5	& ENO & NAK & \% & 5 & E & U & e & u \tabularnewline
+	6	& 0 & 1 & 1 & 0 & 6	& ACK & SYN & \& & 6 & F & V & f & v \tabularnewline
+	7	& 0 & 1 & 1 & 1 & 7	& BEL & ETB & '  & 7 & G & W & g & w \tabularnewline
+	8	& 1 & 0 & 0 & 0 & 8	& BS  & CAN &  ( & 8 & H & X & h & x \tabularnewline
+	9	& 1 & 0 & 0 & 1 & 9	& HT  & EM  &  ) & 9 & I & Y & i & y \tabularnewline
+	A	& 1 & 0 & 1 & 0 & 10& LF  & SUB & *  & : & J & Z & j & z \tabularnewline
+	B	& 1 & 0 & 1 & 1 & 11& VT  & ESC & +  & ; & K & [  & k & \{ \tabularnewline
+	C	& 1 & 1 & 0 & 0 & 12& FF  & FS  & ,  & < & L & \textbackslash & l & | \tabularnewline
+	D	& 1 & 1 & 0 & 1 & 13& CR  & GS  & -  & = & M & ] & m & \} \tabularnewline
+	E	& 1 & 1 & 1 & 0 & 14& SO  & RS  & .  & > & N & \textasciicircum& n & \textasciitilde \tabularnewline
+	F	& 1 & 1 & 1 & 1 & 15& SI  & US  &  / & ? & O & \_ & o & DEL\rule[-1.5ex]{0pt}{0pt}\tabularnewline
+	\hline
+\end{tabular}
+\index{Codifica!ASCII}\index{ASCII!codifica}
+\end{center}

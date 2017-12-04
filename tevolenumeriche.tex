@@ -1,0 +1,118 @@
+% !TeX encoding = UTF-8
+% !TeX spellcheck = it_IT
+\documentclass[openany]{book}%
+\usepackage{cmap}
+\frenchspacing%
+\input{../Mod_base/base}
+\geometry{top=1.5cm,bottom=1.5cm}
+\input{../Mod_base/grafica}
+\input{../Mod_base/matematica}
+\input{../Mod_base/tabelle}
+\input{../Mod_base/rifIndici}
+\input{../Mod_base/pagina}
+\input{../Mod_base/indice}
+\input{../Mod_base/date}
+\input{../Mod_base/loghi}
+\input{../Mod_base/unita_misura}
+\makeindex[options=-s ../Mod_base/oldclaudio.sti]
+\titlecontents{figure}
+[0em]{}
+{\thecontentslabel\hspace*{1.5em}}
+{}{\ \titlerule*[8pt]{}\contentspage}
+\titlecontents{table}
+[0em]{}
+{\thecontentslabel\hspace*{1.5em}}
+{}{\ \titlerule*[8pt]{}\contentspage}
+\newcolumntype{W}{>{\sffamily\Large $}c<{$}}
+\newcolumntype{C}{>{\sffamily $}c<{$}}
+\newcolumntype{M}[1]{>{\centering}p{#1}}
+\newcolumntype{F}{>{$\displaystyle }c<{$}}
+\newcolumntype{L}{>{\sffamily $}l<{$}}
+\newcolumntype{T}{>{\centering\arraybackslash}p{1em}} 
+\newcommand{\Co}{\numberset{C}}
+\newcommand{\HRule}{\rule{\linewidth}{0.5mm}}
+\newlength{\gnat}
+\newlength{\gnam}
+\newcommand{\pilH}{\rule{0pt}{2.5ex}}
+\newcommand{\pilD}{\rule[-1ex]{0pt}{0pt}}
+% 10/09/2017 :: 10:18:49 :: \usepackage{draftwatermark}
+% 10/09/2017 :: 10:19:00 :: \SetWatermarkText{BOZZA}
+\makeatletter
+\renewcommand\frontmatter{%
+	\cleardoublepage
+	\@mainmatterfalse
+	%\pagenumbering{roman}
+}
+\renewcommand\mainmatter{%
+	\cleardoublepage
+	\@mainmattertrue
+	%\pagenumbering{arabic}
+}
+% 4/12/2017 :: 20:51:37 :: \usepackage[grumpy,mark,markifdirty,raisemark=0.95\paperheight]{gitinfo2}
+\usepackage{hyperxmp}
+\usepackage{hyperref}
+\title{Tavole numeriche}
+\author{Claudio Duchi}
+\date{\datetime}
+\hypersetup{%
+pdfencoding=auto,
+urlcolor={blue},
+pdftitle={Tavole},
+pdfsubject={Tavole numeriche},
+pdfstartview={FitH},
+pdfpagemode={UseOutlines},
+pdflicenseurl={http://creativecommons.org/licenses/by-nc-nd/3.0/},
+pdflang={it},
+pdfmetalang={it},
+pdfkeywords={Tavole numeriche},
+pdfcopyright={Copyright (C) 2017, Claudio Duchi},
+pdfcontacturl={http://breviariomatematico.altervista.org},
+pdfcontactpostcode={},
+pdfcontactphone={},
+pdfcontactemail={claduc},
+pdfcontactcountry={Italy},
+pdfcontactcity={Perugia},
+pdfcontactaddress={},
+pdfcaptionwriter={Claudio Duchi},
+pdfauthortitle={},%
+pdfauthor={Claudio Duchi},
+linkcolor={blue},
+colorlinks=true,
+citecolor={red},
+breaklinks,
+bookmarksopen,
+verbose,
+baseurl={http://breviariomatematico.altervista.org}
+}
+\input{compilaTexStudio}
+\usepackage{tkz-berge}
+\listfiles
+\begin{document}
+		\frontmatter
+		\hypersetup{pageanchor=false}
+		\begin{titlepage}
+			\begin{center}
+			\input{../Mod_base/Lgrande}\\[1cm]
+				\textsc{\LARGE Claudio Duchi}\\[1.5cm]
+				\HRule \\[0.4cm]
+				{ \huge \bfseries Tavole numeriche}\\[0.4cm]
+				\HRule \\[1.5cm]
+				\vfill
+			\end{center}
+		\begin{center}
+			\begin{tikzpicture}
+			\renewcommand*{\VertexBallColor}{red!50!black}
+			\GraphInit[vstyle=Art]
+			\grComplete[RA=6]{15}
+			\end{tikzpicture}
+		\end{center}
+		\end{titlepage}
+	\hypersetup{pageanchor=true}
+		\input{../Mod_base/copyright}
+		\tableofcontents
+			\mainmatter
+\input{compilaTexStudioDue}			
+\input{../Mod_base/MezziUsati}
+\addcontentsline{toc}{chapter}{\indexname}
+\printindex
+\end{document}

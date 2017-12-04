@@ -1,0 +1,56 @@
+\section{Tavola pitagorica}
+\label{sec:TavolaPitagorica}
+
+%\begin{table}[!ht]
+%\centering
+%\renewcommand\arraystretch{1.9}
+%\begin{tabular}{*{11}{|m{.5cm}}|}
+%\cline{2-11}
+%\multicolumn{1}{c|} {}& 1 & 2 & 3 & 4 & 5 & 6 & 7 & 8 & 9 & 10 \\\hline
+%1 & 1 & 2 & 3 & 4 & 5 & 6 & 7 & 8 & 9 & 10 \\\hline
+%2 & 2 & 4 & 6 & 8 & 10 & 12 & 14 & 16 & 18 & 20 \\\hline
+%3 & 3 & 6 & 9 & 12 & 15 & 18 & 21 & 24 & 27 & 30 \\\hline
+%4 & 4 & 8 & 12 & 16 & 20 & 24 & 28 & 32 & 36 & 40 \\\hline
+%5 & 5 & 10 & 15 & 20 & 25 & 30 & 35 & 40 & 45 & 50 \\\hline
+%6 & 6 & 12 & 18 & 24 & 30 & 36 & 42 & 48 & 54 & 60 \\\hline
+%7 & 7 & 14 & 21 & 28 & 35 & 42 & 49 & 56 & 63 & 70 \\\hline
+%8 & 8 & 16 & 24 & 32 & 40 & 48 & 56 & 64 & 72 & 80 \\\hline
+%9 & 9 & 18 & 27 & 36 & 45 & 54 & 63 & 72 & 81 & 90 \\\hline
+%10 & 10 & 20 & 30 & 40 & 50 & 60 & 70 & 80 & 90 & 100 \\\hline
+%\end{tabular} 
+%\caption{Tavola pitagorica}
+%\label{tab:Tavolapitagorica}
+%\end{table}
+\begin{table}[H]
+\centering
+%codice Enrico Gregorio Guit
+\def\mybox#1{\fbox{\kern.5cm
+  \vrule height .5cm depth .5cm width 0pt \makebox(0,0){#1}%
+  \kern.5cm}}
+\def\riga#1{%
+  #1&\number\numexpr#1*1\relax
+    &\number\numexpr#1*2\relax
+    &\number\numexpr#1*3\relax
+    &\number\numexpr#1*4\relax
+    &\number\numexpr#1*5\relax
+    &\number\numexpr#1*6\relax
+    &\number\numexpr#1*7\relax
+    &\number\numexpr#1*8\relax
+    &\number\numexpr#1*9\relax
+    &\number\numexpr#1*10\relax}
+\leavevmode\vbox{\fboxsep=0pt \offinterlineskip
+\halign{&\mybox{#}\kern-\fboxrule\cr
+\omit&1&2&3&4&5&6&7&8&9&10\cr\noalign{\kern-\fboxrule}
+\riga{1}\cr\noalign{\kern-\fboxrule}
+\riga{2}\cr\noalign{\kern-\fboxrule}
+\riga{3}\cr\noalign{\kern-\fboxrule}
+\riga{4}\cr\noalign{\kern-\fboxrule}
+\riga{5}\cr\noalign{\kern-\fboxrule}
+\riga{6}\cr\noalign{\kern-\fboxrule}
+\riga{7}\cr\noalign{\kern-\fboxrule}
+\riga{8}\cr\noalign{\kern-\fboxrule}
+\riga{9}\cr\noalign{\kern-\fboxrule}
+\riga{10}\cr\noalign{\kern-\fboxrule}
+}} 
+\label{tab:tavolepitagorica}
+\end{table}\index{Tavola!pitagorica}
