@@ -13,21 +13,16 @@
 \input{../Mod_base/indice}
 \input{../Mod_base/date}
 \input{../Mod_base/loghi}
+\input{../Mod_base/stand_class}
 \input{../Mod_base/unita_misura}
 \makeindex[options=-s ../Mod_base/oldclaudio.sti]
-\titlecontents{figure}
-[0em]{}
-{\thecontentslabel\hspace*{1.5em}}
-{}{\ \titlerule*[8pt]{}\contentspage}
-\titlecontents{table}
-[0em]{}
-{\thecontentslabel\hspace*{1.5em}}
-{}{\ \titlerule*[8pt]{}\contentspage}
+
 \newcolumntype{W}{>{\sffamily\Large $}c<{$}}
 \newcolumntype{C}{>{\sffamily $}c<{$}}
 \newcolumntype{M}[1]{>{\centering}p{#1}}
 \newcolumntype{F}{>{$\displaystyle }c<{$}}
 \newcolumntype{L}{>{\sffamily $}l<{$}}
+\newcolumntype{R}{>{\sffamily $}r<{$}}
 \newcolumntype{T}{>{\centering\arraybackslash}p{1em}}
 \newcolumntype{O}{>{\centering\arraybackslash}p{1.5em}} 
 \newcommand{\Co}{\numberset{C}}
@@ -113,8 +108,11 @@ baseurl={http://breviariomatematico.altervista.org}
 		\input{../Mod_base/copyright}
 		\tableofcontents
 			\mainmatter
-\input{compilaTexStudioDue}			
-\input{../Mod_base/MezziUsati}
+\input{compilaTexStudioDue}	
+\backmatter
+\begin{appendices}
+	\input{../Mod_base/MezziUsati}
+\end{appendices}
 \addcontentsline{toc}{chapter}{\indexname}
 \printindex
 \end{document}

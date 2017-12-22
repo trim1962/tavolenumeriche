@@ -1,0 +1,154 @@
+\documentclass[10pt]{standalone}
+\usepackage{amsmath}
+\usepackage{pgf,tikz}
+\usepackage{mathrsfs}
+\usetikzlibrary{arrows}
+\pagestyle{empty}
+\begin{document}
+\begin{tikzpicture}[node distance=12mm]
+\tikzset{
+	line/.style={draw, ->}
+}
+
+\node(a1){1};
+\node[below right of=a1](b2){1};
+\node[below left of=a1](b1){1};
+\node[below left of=b1](c1){1};
+\node[below right of=b1](c2){2};
+\node[below right of=b2](c3){1};
+\node[below left of=c1](d1){1};
+\node[below right of=c1](d2){3};
+\node[below right of=c2](d3){3};
+\node[below right of=c3](d4){1};
+\node[below left of=d1](e1){1};
+\node[below right of=d1](e2){4};
+\node[below right of=d2](e3){6};
+\node[below right of=d3](e4){4};
+\node[below right of=d4](e5){1};
+% 21/12/2017 :: 16:34:18 :: 
+\node[below left of=e1](f1){1};
+\node[below right of=e1](f2){5};
+\node[below right of=e2](f3){10};
+\node[below right of=e3](f4){10};
+\node[below right of=e4](f5){5};
+\node[below right of=e5](f6){1};
+% 21/12/2017 :: 16:38:20 :: 
+\node[below left of=f1](g1){1};
+\node[below right of=f1](g2){6};
+\node[below right of=f2](g3){15};
+\node[below right of=f3](g4){20};
+\node[below right of=f4](g5){15};
+\node[below right of=f5](g6){6};
+\node[below right of=f6](g7){1};
+% 21/12/2017 :: 16:42:11 :: 
+\node[below left of=g1](h1){1};
+\node[below right of=g1](h2){7};
+\node[below right of=g2](h3){21};
+\node[below right of=g3](h4){35};
+\node[below right of=g4](h5){35};
+\node[below right of=g5](h6){21};
+\node[below right of=g6](h7){7};
+\node[below right of=g7](h8){1};
+% 21/12/2017 :: 16:46:35 :: 
+\node[below left of=h1](i1){1};
+\node[below right of=h1](i2){8};
+\node[below right of=h2](i3){28};
+\node[below right of=h3](i4){56};
+\node[below right of=h4](i5){70};
+\node[below right of=h5](i6){56};
+\node[below right of=h6](i7){28};
+\node[below right of=h7](i8){8};
+\node[below right of=h8](i9){1};
+% 21/12/2017 :: 17:20:46 :: 
+\node[below left of=i1](m1){1};
+\node[below right of=i1](m2){9};
+\node[below right of=i2](m3){36};
+\node[below right of=i3](m4){84};
+\node[below right of=i4](m5){126};
+\node[below right of=i5](m6){126};
+\node[below right of=i6](m7){84};
+\node[below right of=i7](m8){36};
+\node[below right of=i8](m9){9};
+\node[below right of=i9](m10){1};
+
+
+\draw [line] (b1)--(c2);
+\draw [line] (b2)--(c2);
+
+\draw [line] (c1)--(d2);
+\draw [line] (c2)--(d2);
+\draw [line] (c2)--(d3);
+\draw [line] (c3)--(d3);
+
+\draw [line] (d1)--(e2);
+\draw [line] (d2)--(e2);
+\draw [line] (d2)--(e3);
+\draw [line] (d3)--(e3);
+\draw [line] (d3)--(e4);
+\draw [line] (d4)--(e4);
+
+\draw [line] (e1)--(f2);
+\draw [line] (e2)--(f2);
+\draw [line] (e2)--(f3);
+\draw [line] (e3)--(f3);
+\draw [line] (e3)--(f4);
+\draw [line] (e4)--(f4);
+\draw [line] (e4)--(f5);
+\draw [line] (e5)--(f5);
+
+\draw [line] (f1)--(g2);
+\draw [line] (f2)--(g2);
+\draw [line] (f2)--(g3);
+\draw [line] (f3)--(g3);
+\draw [line] (f3)--(g4);
+\draw [line] (f4)--(g5);
+\draw [line] (f5)--(g5);
+\draw [line] (f5)--(g6);
+\draw [line] (f6)--(g6);
+
+\draw [line] (g1)--(h2);
+\draw [line] (g2)--(h2);
+\draw [line] (g2)--(h3);
+\draw [line] (g3)--(h3);
+\draw [line] (g3)--(h4);
+\draw [line] (g4)--(h4);
+\draw [line] (g4)--(h5);
+\draw [line] (g5)--(h5);
+\draw [line] (g5)--(h6);
+\draw [line] (g6)--(h6);
+\draw [line] (g6)--(h7);
+\draw [line] (g7)--(h7);
+
+\draw [line] (h1)--(i2);
+\draw [line] (h2)--(i2);
+\draw [line] (h2)--(i3);
+\draw [line] (h3)--(i3);
+\draw [line] (h3)--(i4);
+\draw [line] (h4)--(i4);
+\draw [line] (h4)--(i5);
+\draw [line] (h5)--(i5);
+\draw [line] (h5)--(i6);
+\draw [line] (h6)--(i6);
+\draw [line] (h6)--(i7);
+\draw [line] (h7)--(i7);
+\draw [line] (h7)--(i8);
+\draw [line] (h8)--(i8);
+
+\draw [line] (i1)--(m2);
+\draw [line] (i2)--(m2);
+\draw [line] (i2)--(m3);
+\draw [line] (i3)--(m3);
+\draw [line] (i3)--(m4);
+\draw [line] (i4)--(m4);
+\draw [line] (i4)--(m5);
+\draw [line] (i5)--(m5);
+\draw [line] (i5)--(m6);
+\draw [line] (i6)--(m6);
+\draw [line] (i6)--(m7);
+\draw [line] (i7)--(m7);
+\draw [line] (i7)--(m8);
+\draw [line] (i8)--(m8);
+\draw [line] (i8)--(m9);
+\draw [line] (i9)--(m9);
+\end{tikzpicture}
+\end{document}
