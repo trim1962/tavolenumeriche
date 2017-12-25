@@ -29,3 +29,10 @@
 *.sym
 *.db
 *.db
+/sudoku.tex
+/quadrato.tex
+*.bbl
+*.bcf
+*.bak
+*.blg
+*.xml

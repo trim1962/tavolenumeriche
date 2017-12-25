@@ -45,6 +45,10 @@
 	%\pagenumbering{arabic}
 }
 \usepackage[grumpy,mark,markifdirty,raisemark=0.95\paperheight]{gitinfo2}
+\usepackage{tkz-berge}
+\usepackage[autostyle,italian=guillemets]{csquotes}
+\usepackage[bibstyle=numeric,backend=biber]{biblatex}
+\addbibresource{tavolenumeriche.bib}
 \usepackage{hyperxmp}
 \usepackage{hyperref}
 \title{Tavole numeriche}
@@ -81,7 +85,7 @@ verbose,
 baseurl={http://breviariomatematico.altervista.org}
 }
 \input{compilaTexStudio}
-\usepackage{tkz-berge}
+
 \listfiles
 \begin{document}
 		\frontmatter
@@ -107,11 +111,13 @@ baseurl={http://breviariomatematico.altervista.org}
 		\input{../Mod_base/copyright}
 		\tableofcontents
 		\mainmatter
-\input{compilaTexStudioDue}	
+\input{compilaTexStudioDue}	 
 \backmatter
 \begin{appendices}
 	\input{../Mod_base/MezziUsati}
 \end{appendices}
 \addcontentsline{toc}{chapter}{\indexname}
+\nocite{*}
+\printbibliography[heading=bibintoc]
 \printindex
 \end{document}
