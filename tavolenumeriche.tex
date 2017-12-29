@@ -15,6 +15,17 @@
 \input{../Mod_base/loghi}
 \input{../Mod_base/stand_class}
 \input{../Mod_base/unita_misura}
+\input{../Mod_base/glossario}
+%\newglossary[slg]{symbolslist}{sym}{sbl}{Elenco di simboli}
+\makeglossaries
+\renewcommand*{\glsxtrpostdescgeneral}{%
+	\ifglshasfield{see}{\glscurrententrylabel}
+	{, \glsxtrusesee{\glscurrententrylabel}}%
+	{}%
+}
+\setglossarystyle{altlistgroup}
+\loadglsentries{glossario/glossari1}
+
 \makeindex[options=-s ../Mod_base/oldclaudio.sti]
 \newcolumntype{W}{>{\sffamily\Large $}c<{$}}
 \newcolumntype{C}{>{\sffamily $}c<{$}}
@@ -47,6 +58,11 @@
 \makeatother
 \usepackage[grumpy,mark,markifdirty,raisemark=0.95\paperheight]{gitinfo2}
 \usepackage{tkz-berge}
+\usepackage[toc,page]{appendix}
+
+\renewcommand{\appendixtocname}{Appendici}
+
+\renewcommand{\appendixpagename}{Appendici}
 \usepackage[autostyle,italian=guillemets]{csquotes}
 \usepackage[bibstyle=numeric,backend=biber]{biblatex}
 \addbibresource{tavolenumeriche.bib}
@@ -113,12 +129,21 @@ baseurl={http://breviariomatematico.altervista.org}
 		\tableofcontents
 		\mainmatter
 \input{compilaTexStudioDue}	 
-\backmatter
+\cleardoublepage	
 \begin{appendices}
 	\input{../Mod_base/MezziUsati}
+	\glsaddall
+	\twocolumn
+	\printglossaries
+	\onecolumn
 \end{appendices}
-\addcontentsline{toc}{chapter}{\indexname}
+\cleardoublepage
 \nocite{*}
-\printbibliography[heading=bibintoc]
+\addcontentsline{toc}{chapter}{\bibname}
+\printbibliography
+\cleardoublepage
+\addcontentsline{toc}{chapter}{\indexname}
+
 \printindex
+
 \end{document}
