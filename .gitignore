@@ -36,3 +36,5 @@
 *.bak
 *.blg
 *.xml
+/test.tex
+/test2.tex
