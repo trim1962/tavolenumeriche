@@ -1,6 +1,6 @@
 % !TeX encoding = UTF-8
 % !TeX spellcheck = it_IT
-\documentclass[openany]{book}%
+\documentclass{book}%
 \usepackage{cmap}
 \frenchspacing%
 \input{../Mod_base/base}
@@ -27,14 +27,16 @@
 \loadglsentries{glossario/glossari1}
 
 \makeindex[options=-s ../Mod_base/oldclaudio.sti]
-\newcolumntype{W}{>{\sffamily\Large $}c<{$}}
 \newcolumntype{C}{>{\sffamily $}c<{$}}
-\newcolumntype{M}[1]{>{\centering}p{#1}}
 \newcolumntype{F}{>{$\displaystyle }c<{$}}
 \newcolumntype{L}{>{\sffamily $}l<{$}}
+\newcolumntype{M}[1]{>{\centering}p{#1}}
+\newcolumntype{A}{r@{\hspace*{1mm}}r@{\hspace*{1mm}}r}
+\newcolumntype{Q}{r@{\hspace*{1mm}}r}
+\newcolumntype{O}{>{\centering\arraybackslash}p{1.5em}} 
 \newcolumntype{R}{>{\sffamily $}r<{$}}
 \newcolumntype{T}{>{\centering\arraybackslash}p{1em}}
-\newcolumntype{O}{>{\centering\arraybackslash}p{1.5em}} 
+\newcolumntype{W}{>{\sffamily\Large $}c<{$}}
 \newcommand{\Co}{\numberset{C}}
 \newcommand{\HRule}{\rule{\linewidth}{0.5mm}}
 \newlength{\gnat}
@@ -64,7 +66,12 @@
 
 \renewcommand{\appendixpagename}{Appendici}
 \usepackage[autostyle,italian=guillemets]{csquotes}
-\usepackage[bibstyle=numeric,backend=biber]{biblatex}
+\usepackage[%
+style=philosophy-modern,
+% 9/01/2018 :: 9:24:04 :: annotation=true,
+hyperref,
+backend=biber,
+backref]{biblatex}
 \addbibresource{tavolenumeriche.bib}
 \usepackage{hyperxmp}
 \usepackage{hyperref}
@@ -102,7 +109,11 @@ verbose,
 baseurl={http://breviariomatematico.altervista.org}
 }
 \input{compilaTexStudio}
-
+\theoremstyle{definition}
+\newtheorem{definizione}{Definizione}
+\theoremstyle{plain}
+\newtheorem{teorema}{Teorema}
+\newcommand{\citaoeis}[1]{La successione è la successione \citetitle{#1}~\citeurl{#1} del OEIS}
 \listfiles
 \begin{document}
 		\frontmatter
@@ -132,6 +143,7 @@ baseurl={http://breviariomatematico.altervista.org}
 \cleardoublepage	
 \begin{appendices}
 	\input{../Mod_base/MezziUsati}
+	\input{formule}
 	\glsaddall
 	\twocolumn
 	\printglossaries

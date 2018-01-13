@@ -1,0 +1,63 @@
+\chapter{Formule}
+\section{Fattoriale}
+\citaoeis{A000142}
+\begin{equation}
+n!=1\cdot 2\cdot 3\dots (n-1)\cdot n
+\end{equation}\index{Numero!Fattoriale}
+\section{Numeri di Fibonacci}
+\citaoeis{A000045}
+\begin{equation}
+F_n=F_{n-1}+F_{n-2}\qquad\ F_{1}=1\; F_{2}=1 
+\end{equation}\index{Numero!Fibonacci}
+\section{Numeri di Lucas}
+\citaoeis{A000032}
+\begin{equation}
+L_n=L_{n-1}+L_{n-2}\qquad\ L_{1}=2\; L_{2}=1 
+\end{equation}\index{Numero!Lucas}
+\section{Terne pitagoriche primitive}
+\subsection{Terna pitagorica}
+\begin{definizione}
+$a$, $b$ e $c$ sono una terna pitagorica se \[a^2+b^2=c^2\]
+\end{definizione}
+\begin{definizione}
+Una terna pitagorica  $a$, $b$ e $c$ è una terna primitiva se
+\[\mcd(a,b,c)=1\]
+\end{definizione}
+\begin{teorema}
+	Se $m$ e $n$ sono coprimi e sono uno pari e l'altro dispari allora
+	\begin{align*}
+	a=&m^2-n^2\\
+	b=&2mn\\
+	c=&m^2+n^2
+	\end{align*}
+	è una terna primitiva e viceversa. 
+\end{teorema}
+\begin{proof}
+	Dimostriamo che è una terna pitagorica cioè che \[a^2+b^2=c^2\]
+	ora 
+		\begin{align*}
+	a=&m^4-2m^2n^2+n^4\\
+	b=&4m^2n^2\\
+	c=&m^4+2m^2n^2+n^4\\
+	m^4-2m^2n^2+n^4+4m^2n^2=&m^4+2m^2n^2+n^4\\
+	\end{align*}
+	da cui la dimostrazione della prima parte. 
+	
+	Dimostriamo che sono primi
+\end{proof}
+\begin{teorema}
+	Se $m$ è un numero dispari allora
+		\begin{align*}
+	a=&m\\
+	b=&\dfrac{m^2-1}{2} \\
+	c=&\dfrac{m^2+1}{2}
+	\end{align*}
+	è una terna pitagorica.\par
+		Se $m$ è un numero pari non prodotto fra un pari e un dispari, allora
+	\begin{align*}
+	a=&m\\
+	b=&\dfrac{m^2-4}{4} \\
+	c=&\dfrac{m^2+4}{4}
+	\end{align*}
+		è una terna pitagorica.
+\end{teorema}
