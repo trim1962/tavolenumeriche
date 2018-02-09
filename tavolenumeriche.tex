@@ -19,15 +19,9 @@
 
 \makeindex[options=-s ../Mod_base/oldclaudio.sti]
 \newcolumntype{C}{>{\sffamily $}c<{$}}
-%\newcolumntype{F}{>{$\displaystyle }c<{$}}
-%\newcolumntype{L}{>{\sffamily $}l<{$}}
 \newcolumntype{M}[1]{>{\centering}p{#1}}
-%\newcolumntype{A}{r@{\hspace*{1mm}}r@{\hspace*{1mm}}r}
-%\newcolumntype{Q}{r@{\hspace*{1mm}}r}
-%\newcolumntype{O}{>{\centering\arraybackslash}p{1.5em}} 
-%\newcolumntype{R}{>{\sffamily $}r<{$}}
-%\newcolumntype{T}{>{\centering\arraybackslash}p{1em}}
 \newcolumntype{W}{>{\sffamily\Large $}c<{$}}
+\newcolumntype{Q}{r@{\hspace*{1mm}}r}
 \newcommand{\Co}{\numberset{C}}
 \newcommand{\HRule}{\rule{\linewidth}{0.5mm}}
 \newlength{\gnat}
@@ -39,22 +33,20 @@
 \input{../Mod_base/altrebasitabelle}
 \makeatletter
 \renewcommand\frontmatter{%
-	\cleardoublepage
-	\@mainmatterfalse
-	%\pagenumbering{roman}
+\cleardoublepage
+\@mainmatterfalse
+%\pagenumbering{roman}
 }
 \renewcommand\mainmatter{%
-	\cleardoublepage
-	\@mainmattertrue
-	%\pagenumbering{arabic}
+\cleardoublepage
+\@mainmattertrue
+%\pagenumbering{arabic}
 }
 \makeatother
 \usepackage[grumpy,mark,markifdirty,raisemark=0.95\paperheight]{gitinfo2}
 \usepackage{tkz-berge}
 \usepackage[toc,page]{appendix}
-
 \renewcommand{\appendixtocname}{Appendice}
-
 \renewcommand{\appendixpagename}{Appendice}
 \usepackage{hyperxmp}
 \usepackage{hyperref}
@@ -72,7 +64,7 @@ pdflicenseurl={http://creativecommons.org/licenses/by-nc-nd/3.0/},
 pdflang={it},
 pdfmetalang={it},
 pdfkeywords={Tavole numeriche},
-pdfcopyright={Copyright (C) 2017, Claudio Duchi},
+pdfcopyright={Copyright (C) 2018, Claudio Duchi},
 pdfcontacturl={http://breviariomatematico.altervista.org},
 pdfcontactpostcode={},
 pdfcontactphone={},
@@ -92,40 +84,35 @@ verbose,
 baseurl={http://breviariomatematico.altervista.org}
 }
 \input{compilaTexStudio}
-\theoremstyle{definition}
-\newtheorem{definizione}{Definizione}
-\theoremstyle{plain}
-\newtheorem{teorema}{Teorema}
-\newcommand{\citaoeis}[1]{La successione è la successione \citetitle{#1}~\citeurl{#1} del OEIS}
 \listfiles
 \begin{document}
-		\frontmatter
-		\hypersetup{pageanchor=false}
-		\begin{titlepage}
-			\begin{center}
-			\input{../Mod_base/Lgrande}\\[1cm]
-				\textsc{\LARGE Claudio Duchi}\\[1.5cm]
-				\HRule \\[0.4cm]
-				{ \huge \bfseries Tavole numeriche}\\[0.4cm]
-				\HRule \\[1.5cm]
-				\vfill
-			\end{center}
-		\begin{center}
-			\begin{tikzpicture}
-			\renewcommand*{\VertexBallColor}{red!50!black}
-			\GraphInit[vstyle=Art]
-			\grComplete[RA=6]{15}
-			\end{tikzpicture}
-		\end{center}
-		\end{titlepage}
-	\hypersetup{pageanchor=true}
-		\input{../Mod_base/copyright}
-		\tableofcontents
-		\mainmatter
+\frontmatter
+\hypersetup{pageanchor=false}
+\begin{titlepage}
+\begin{center}
+\input{../Mod_base/Lgrande}\\[1cm]
+\textsc{\LARGE Claudio Duchi}\\[1.5cm]
+\HRule\\[0.4cm]
+{ \huge \bfseries Tavole numeriche}\\[0.4cm]
+\HRule\\[1.5cm]
+\vfill
+\end{center}
+\begin{center}
+\begin{tikzpicture}
+\renewcommand*{\VertexBallColor}{red!50!black}
+\GraphInit[vstyle=Art]
+\grComplete[RA=6]{15}
+\end{tikzpicture}
+\end{center}
+\end{titlepage}
+\hypersetup{pageanchor=true}
+\input{../Mod_base/copyright}
+\tableofcontents
+\mainmatter
 \input{compilaTexStudioDue}	 
 \cleardoublepage	
 \begin{appendices}
-	\input{../Mod_base/MezziUsati}
+\input{../Mod_base/MezziUsati}
 \end{appendices}
 \cleardoublepage
 \addcontentsline{toc}{chapter}{\indexname}
