@@ -38,3 +38,5 @@
 *.xml
 /test.tex
 /test2.tex
+*.csv
+*.ods

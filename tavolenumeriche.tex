@@ -8,21 +8,26 @@
 \input{../Mod_base/grafica}
 \input{../Mod_base/matematica}
 \input{../Mod_base/tabelle}
-\input{../Mod_base/rifIndici}
+% 15/04/2018 :: 8:30:47 :: \input{../Mod_base/rifIndici}
 \input{../Mod_base/pagina}
 \input{../Mod_base/indice}
 \input{../Mod_base/date}
 \input{../Mod_base/loghi}
 \input{../Mod_base/stand_class}
 \input{../Mod_base/unita_misura}
-
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%lunghezza arrotondamenti%%%%%
+\newcommand{\lungarrotandamento}{4}
+\newcommand{\extralungarrotandamento}{6}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\usepackage{imakeidx}
 
 \makeindex[options=-s ../Mod_base/oldclaudio.sti]
 \newcolumntype{C}{>{\sffamily $}c<{$}}
 \newcolumntype{M}[1]{>{\centering}p{#1}}
 \newcolumntype{W}{>{\sffamily\Large $}c<{$}}
 \newcolumntype{Q}{r@{\hspace*{1mm}}r}
-\newcommand{\Co}{\numberset{C}}
+% 15/04/2018 :: 8:26:06 :: \newcommand{\Co}{\numberset{C}}
 \newcommand{\HRule}{\rule{\linewidth}{0.5mm}}
 \newlength{\gnat}
 \newlength{\gnam}
@@ -42,14 +47,17 @@
 \@mainmattertrue
 %\pagenumbering{arabic}
 }
+\usepackage{qrcode}
 \makeatother
 \usepackage[grumpy,mark,markifdirty,raisemark=0.95\paperheight]{gitinfo2}
 \usepackage{tkz-berge}
 \usepackage[toc,page]{appendix}
 \renewcommand{\appendixtocname}{Appendice}
 \renewcommand{\appendixpagename}{Appendice}
+\usepackage[italian]{varioref}
 \usepackage{hyperxmp}
-\usepackage{hyperref}
+\usepackage[pdfpagelabels]{hyperref}
+\usepackage[italian]{cleveref}
 \title{Tavole numeriche}
 \author{Claudio Duchi}
 \date{\datetime}
