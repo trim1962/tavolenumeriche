@@ -51,7 +51,7 @@
 \usepackage{qrcode}
 \makeatother
 \usepackage[grumpy,mark,markifdirty,raisemark=0.95\paperheight]{gitinfo2}
-\usepackage{tkz-berge}
+
 \usepackage[toc,page]{appendix}
 \renewcommand{\appendixtocname}{Appendice}
 \renewcommand{\appendixpagename}{Appendice}
@@ -105,14 +105,15 @@ baseurl={http://breviariomatematico.altervista.org}
 { \huge \bfseries Tavole numeriche}\\[0.4cm]
 \HRule\\[1.5cm]
 \vfill
+		% Bottom of the page
+\polylogo[5.5]{15}		
+{\large $-$\DTMnow$-$}
 \end{center}
-\begin{center}
-\begin{tikzpicture}
-\renewcommand*{\VertexBallColor}{red!50!black}
-\GraphInit[vstyle=Art]
-\grComplete[RA=6]{15}
-\end{tikzpicture}
-\end{center}
+{\centering
+Release:\gitReln\ (\gitAbbrevHash)\ Autore:\gitAuthorName\ 
+\gitCommitterDate \\
+}
+
 \end{titlepage}
 \hypersetup{pageanchor=true}
 \CDcopyright
