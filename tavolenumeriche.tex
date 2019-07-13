@@ -37,7 +37,7 @@
 \newcommand{\pilD}{\rule[-1ex]{0pt}{0pt}}
 % 10/09/2017 :: 10:18:49 :: \usepackage{draftwatermark}
 % 10/09/2017 :: 10:19:00 :: \SetWatermarkText{BOZZA}
-\input{../Mod_base/altrebasitabelle}
+\usepackage{altrebasitabelle}
 \makeatletter
 \renewcommand\frontmatter{%
 \cleardoublepage
@@ -100,7 +100,7 @@ baseurl={http://breviariomatematico.altervista.org}
 \hypersetup{pageanchor=false}
 \begin{titlepage}
 \begin{center}
-\input{../Mod_base/Lgrande}\\[1cm]
+	\Lgrandedue\\[1cm]    
 \textsc{\LARGE Claudio Duchi}\\[1.5cm]
 \HRule\\[0.4cm]
 { \huge \bfseries Tavole numeriche}\\[0.4cm]
@@ -116,15 +116,14 @@ baseurl={http://breviariomatematico.altervista.org}
 \end{center}
 \end{titlepage}
 \hypersetup{pageanchor=true}
-\input{../Mod_base/copyright}
+\CDcopyright
 \tableofcontents
 \mainmatter
 \input{compilaTexStudioDue}	 
-\cleardoublepage	
-\begin{appendices}
-\input{../Mod_base/MezziUsati}
-\end{appendices}
 \cleardoublepage
 \addcontentsline{toc}{chapter}{\indexname}
 \printindex
+\appendix
+\chapter{Mezzi usati}
+\CDMezziUsati
 \end{document}
