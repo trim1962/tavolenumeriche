@@ -1,20 +1,22 @@
 % !TeX encoding = UTF-8
 % !TeX spellcheck = it_IT
-\documentclass{book}%
+\documentclass[openany,a4paper]{book}%
+\usepackage{base}
 \usepackage{cmap}
 \frenchspacing%
-\input{../Mod_base/base}
+\usepackage{base}
 \geometry{top=1.5cm,bottom=1.5cm}
-\input{../Mod_base/grafica}
-\input{../Mod_base/matematica}
-\input{../Mod_base/tabelle}
+\usepackage{grafica}
+\usepackage{matematica}
+\usepackage{tabelle}
 % 15/04/2018 :: 8:30:47 :: \input{../Mod_base/rifIndici}
-\input{../Mod_base/pagina}
-\input{../Mod_base/indice}
-\input{../Mod_base/date}
-\input{../Mod_base/loghi}
-\input{../Mod_base/stand_class}
-\input{../Mod_base/unita_misura}
+\usepackage{pagina}
+\usepackage{indice}
+\usepackage{date}
+\usepackage{stand_class}
+\usepackage{CDloghi}
+\usepackage{unita_misura}
+\usepackage{copyright}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%lunghezza arrotondamenti%%%%%
 \newcommand{\lungarrotandamento}{4}
@@ -72,7 +74,7 @@ pdflicenseurl={http://creativecommons.org/licenses/by-nc-nd/3.0/},
 pdflang={it},
 pdfmetalang={it},
 pdfkeywords={Tavole numeriche},
-pdfcopyright={Copyright (C) 2018, Claudio Duchi},
+pdfcopyright={Copyright (C) 2019, Claudio Duchi},
 pdfcontacturl={http://breviariomatematico.altervista.org},
 pdfcontactpostcode={},
 pdfcontactphone={},
